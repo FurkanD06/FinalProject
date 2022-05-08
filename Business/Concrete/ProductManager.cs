@@ -85,7 +85,7 @@ namespace Business.Concrete
         private IResult CheckIfProductCountOfCategoryCorret(int categoryId)
         {
             var result = _productDal.GetAll(p => p.CategoryId == categoryId).Count;
-            if (result >= 10)
+            if (result >= 19)
             {
                 return new ErrorResult(Messages.ProductConutOfCategoryError);
             }
